@@ -23,3 +23,10 @@ else:
     print("Su sueldo es de: ", sueldo)
 
 
+for x in range(10):
+    if x > 2 and not x % 2:
+        print(x)
+else:
+    print("fin")
+
+
