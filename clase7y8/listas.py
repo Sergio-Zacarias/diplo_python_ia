@@ -43,3 +43,84 @@
 # print(f"La cantidad de nombres con 5 o mas caracteres es: {mayores}")
 
 # -------------------------------------------------------------------------------------------
+# 4- Almacenar en una lista los sueldos (valores float) de 5 operarios.
+# Imprimir la lista y el promedio de sueldos.
+# lista = []
+# suma_sueldos = 0
+# for x in range(6):
+#     sueldo = float(input("Ingrese su sueldo: "))
+#     suma_sueldos = suma_sueldos + sueldo
+#     lista.append(sueldo)
+
+# print(lista)
+# print(f"Promedio de sueldos: {suma_sueldos / 5}")
+
+# -------------------------------------------------------------------------------------------
+# 5- Cargar por teclado y almacenar en una lista las alturas de 5 personas
+# (valores float)
+# Obtener el promedio de las mismas. Contar cuántas personas son más altas
+# que el promedio y cuántas más bajas
+# lista = []
+# suma_alturas = 0
+# contador_altos = 0
+# contador_bajos = 0
+# for x in range(6):
+#     altura = float(input("Ingrese su altura: "))
+#     lista.append(altura)
+#     suma_alturas = suma_alturas + altura
+
+# promedio = suma_alturas / 5
+
+# for x in range(5):
+#     if lista[x] > promedio:
+#         contador_altos+= 1
+#     if lista[x] < promedio:
+#         contador_bajos += 1
+
+# print(f"El promedio de las alturas es: {promedio:.2f}") #el especificador :. en f strings rendonde a n decimales
+# print("Personas mas altas que el promedio: ",contador_altos)
+# print("Personas mas bajas que el promedio: ",contador_bajos)
+
+# -------------------------------------------------------------------------------------------
+# 6- Una empresa tiene dos turnos (mañana y tarde) en los que trabajan 8
+# empleados (4 por la mañana y 4 por la tarde) Confeccionar un programa que
+# permita almacenar los sueldos de los empleados agrupados en dos listas.
+# Imprimir las dos listas de sueldos
+# turno_morning = []
+# turno_afternoon = []
+
+# for x in range(8):
+#     turno = input("Ingrese turno: mañana o tarde: ").lower()
+#     sueldo = float(input("Ingrese sueldo: "))
+#     if turno == "mañana" and len(turno_morning) < 5:
+#         turno_morning.append(sueldo)
+#     elif turno == "tarde" and len(turno_afternoon) < 5:
+#         turno_afternoon.append(sueldo)
+
+# print(f"Turno mañana: {turno_morning}")
+# print(f"Turno tarde: {turno_afternoon}")
+
+# -------------------------------------------------------------------------------------------
+# 7- Ingresar por teclado los nombres de 5 personas y almacenarlos en
+# una lista. Mostrar el nombre de persona menor en orden alfabético. 
+# nombres = []
+
+# for x in range(5):
+#     nomb = input("Ingrese su nombre: ")
+#     nombres.append(nomb)
+
+# print(min(nombres))
+
+# -------------------------------------------------------------------------------------------
+# 8- Cargar una lista con 5 elementos enteros. Imprimir el mayor y
+# un mensaje si se repite dentro de la lista (es decir si dicho valor
+# se encuentra en 2 o más posiciones en la lista)
+numeros = []
+posicion_del_mayor = numeros[0]
+for x in range(5):
+    num = int(input("Ingrese un numero: "))
+    numeros.append(num)
+for x in range(1-5):
+    if numeros[x] > posicion_del_mayor:
+        posicion_del_mayor = numeros[x]
+
