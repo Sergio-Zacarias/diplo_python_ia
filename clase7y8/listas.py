@@ -350,9 +350,144 @@
 # print(lista)
 
 # -------------------------------------------------------------------------------------------
-
 # 18- Crear una lista por asignación con la cantidad de elementos de tipo
 # lista que usted desee.
 # Luego imprimir el último elemento de la lista principal
 # lista=[[4,12,5,66], [14,6,25], [3,4,5,67,89,23,1], [78,56]]
 # print(lista[len(lista) - 1])
+
+
+# -------------------------------------------------------------------------------------------
+# 19- Se desea saber la temperatura media trimestral de cuatro paises.
+# Para ello se tiene como dato las temperaturas medias mensuales de dichos paises.
+# Se debe ingresar el nombre del país y seguidamente las tres temperaturas
+# medias mensuales
+# a - Cargar por teclado los nombres de los paises y las temperaturas medias
+#  mensuales.
+# b - Imprimir los nombres de las paises y las temperaturas medias mensuales
+# de las mismas.
+# c - Calcular la temperatura media trimestral de cada país.
+# c - Imprimir los nombres de los paises y las temperaturas medias trimestrales.
+# b - Imprimir el nombre del pais con la temperatura media trimestral mayor
+
+# paises = []
+# temperaturas_medias = []
+# temp_final = []
+
+# for x in range(4):
+#     pais = input("Ingrese nombre del pais: ")
+#     paises.append(pais)
+#     temperatura1 = float(input("Ingrese primer temperatura: "))
+#     temperatura2 = float(input("Ingrese segunda temperatura: "))
+#     temperatura3 = float(input("Ingrese tercer temperatura: "))
+#     temperaturas_medias.append([temperatura1,temperatura2,temperatura3])
+# for x in range(4):
+#     print(paises[x])
+#     for i in range(len(temperaturas_medias[x])):
+#         print(f"Temperatura media: {temperaturas_medias[x][i]}")
+
+# for x in range(4):
+#     for i in range(len(temperaturas_medias[x])):
+#         temperaturas_medias[x] = temperaturas_medias[x] + temperaturas_medias[i]
+#         temp_final.append(temperaturas_medias)
+
+# for x in range(len(paises)):
+#     print(f"La temp media de {paises[x]} es: {temp_final[x]/3}")
+
+
+# -------------------------------------------------------------------------------------------
+
+# 20- Definir una lista y almacenar los nombres de 3 empleados.
+# Por otro lado definir otra lista y almacenar en cada elemento una sublista
+# con los números de días del mes que el empleado faltó.
+# Imprimir los nombres de empleados y los días que faltó.
+# Mostrar los empleados con la cantidad de inasistencias.
+# Finalmente mostrar el nombre o los nombres de empleados que faltaron menos días    
+        
+# empleados = ["Sergio", "Leo", "Marisa"]
+# dias_ausentes = [[10,25],[3],[7,9,11,23,30]]
+# for x in range(3):
+#     print(f"El empleado {empleados[x]} se ausento los dias: ")
+#     for i in range(len(dias_ausentes[x])):
+#         print(dias_ausentes[x][i])
+
+# for x in range(3):
+#     ausencias = 0 #se reinicia a 0 para cada empleado al finalizar el segundo for
+#     for i in range(len(dias_ausentes[x])):
+#         if dias_ausentes[x][i]!= "":
+#             ausencias+=1
+#     print(f"El empleado {empleados[x]} tiene: {ausencias} ausencias")
+# # Solucion de Gemini
+# # 1. Creamos una lista para almacenar cuántas faltas tuvo cada uno
+# cantidades = []
+# for x in range(len(empleados)):
+#     cantidades.append(len(dias_ausentes[x]))
+
+# # 2. Encontramos el número mínimo de faltas
+# minimo = min(cantidades)
+
+# # 3. Buscamos qué empleados tienen ese valor mínimo
+# print("\n--- Empleados con menos ausencias ---")
+# for x in range(len(empleados)):
+#     if cantidades[x] == minimo:
+#         print(f"{empleados[x]} con {minimo} ausencias")
+
+
+# -------------------------------------------------------------------------------------------
+# ELIMINACION DE ELEMENTOS DE UNA LISTA
+
+# 21- Crear dos listas paralelas. En la primera ingresar los nombres de
+# empleados y en la segunda los sueldos de cada empleado.
+# Ingresar por teclado cuando inicia el programa la cantidad de empleados
+# de la empresa.
+# Borrar luego todos los empleados que tienen un sueldo mayor a 10000
+# (tanto el sueldo como su nombre)
+# empleados = []
+# sueldos = []
+# cantidad = int(input("Ingrese cantidad de empleados: "))
+
+# for x in range(cantidad):
+#     nombre = input("Ingrese nombre: ")
+#     empleados.append(nombre)
+#     sueldo = int(input("Ingrese su sueldo: "))
+#     sueldos.append(sueldo)
+# print(empleados,sueldos)
+
+# Recorremos desde el último índice hasta el 0
+
+# La lógica del recorrido inverso
+
+# Para hacer esto, utilizamos range() con tres parámetros:
+# range(inicio, fin, paso).
+
+# inicio: len(sueldos) - 1 (el último índice).
+
+# fin: -1 (para que llegue hasta el índice 0).
+
+# paso: -1 (para que vaya restando en lugar de sumando).
+
+# for x in range(len(sueldos) - 1, -1, -1):
+#     if sueldos[x] > 10000:
+#         print(f"Borrando a {empleados[x]} con sueldo {sueldos[x]}")
+#         empleados.pop(x)
+#         sueldos.pop(x)
+
+# print("\nListas finales:", empleados, sueldos)
+
+
+# -------------------------------------------------------------------------------------------
+# 22- Crear una lista de 5 enteros y cargarlos por teclado.
+# Borrar los elementos mayores o iguales a 10 y generar una nueva lista
+# con dichos valores.
+# enteros = []
+# nueva_lista = []
+# for x in range(5):
+#     valor = int(input("Ingrese valor: "))
+#     enteros.append(valor)
+# aux = ""
+# for x in range(len(enteros)-1,-1,-1):
+#     if enteros[x] >= 10:
+#         aux = enteros.pop(x)
+#         nueva_lista.append(aux)
+# print("\n Nueva lista con valores mayores o iguales a 10")
+# print(nueva_lista)
